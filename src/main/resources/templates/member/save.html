@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>save</title>
+</head>
+<body>
+  <h2 align="center">직원 추가</h2>
+  <form action="/member/save" method="post">
+    <label>사번 : </label><input type="text" name="empId"><br>
+    <label>이름 : </label><input type="text" name="empName"><br>
+    <label>주민등록번호 : </label><input type="text" name="empNo"><br>
+    <label>이메일 : </label><input type="text" name="email"><br>
+    <label>전화번호 : </label><input type="text" name="phone"><br>
+    <label>부서코드 : </label><input type="text" name="department.deptId"><br>
+    <label>직급코드 : </label><input type="text" name="job.jobCode"><br>
+    <label>급여코드 : </label><input type="text" name="salLevel.salLevel"><br>
+    <label>급여 : </label><input type="number" name="salry"><br>
+    <label>매니저 코드 : </label><input type="text" name="menagerId"><br>
+    <input type="submit" value="전송">
+  </form>
+
+</body>
+</html>

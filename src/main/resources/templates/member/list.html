@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+  <h2 align="center">조회 목록 입니다</h2>
+  <table border="1" align="center">
+    <tr>
+      <th>사번</th>
+      <th>이름</th>
+      <th>주민등록번호</th>
+      <th>email</th>
+      <th>전화번호</th>
+      <th>부서코드</th>
+      <th>직급코드</th>
+      <th>급여코드</th>
+      <th>급여</th>
+      <th>보너스</th>
+      <th>매니저 코드</th>
+      <th>입사일</th>
+      <th>퇴사일</th>
+      <th>재직여부</th>
+    </tr>
+    <tr th:each="m : ${member}">
+      <td th:text="${m.empId}"></td>
+      <td th:text="${m.empName}"></td>
+      <td th:text="${m.empNo}"></td>
+      <td th:text="${m.email}"></td>
+      <td th:text="${m.phone} ? ${m.phone} : '폰없찐'"></td>
+      <td th:text="${m.department?.deptId}"></td>
+      <td th:text="${m.job.jobCode}"></td>
+      <td th:text="${m.salLevel.salLevel}"></td>
+      <td th:text="${m.salry}"></td>
+      <td th:text="${m.bonus} ? ${m.bonus} : '0'"></td>
+      <td th:text="${m.menagerId} ? ${m.menagerId} : 'X' "></td>
+      <td th:text="${m.hireDate}"></td>
+      <td th:text="${m.entDate} ? ${m.entDate} : '재직중'"></td>
+      <td th:text="${m.entYn}"></td>
+    </tr>
+  </table>
+
+</body>
+</html>

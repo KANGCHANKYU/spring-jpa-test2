@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>serchFindMember</title>
+</head>
+<body>
+    <h2 align="center">카테고리별로 검색</h2>
+    <form action="/member/serchFindMember" method="post">
+      <select id="value" onchange="searchCategory()">
+        <option name="value" value="0">사번</option>
+        <option name="value" value="1">부서 코드</option>
+        <option name="value" value="2">직급 코드</option>
+      </select>
+        <input type="text" name="code">
+        <input type="submit" value="전송">
+    </form>
+
+
+
+</body>
+</html>
